@@ -34,7 +34,7 @@
 (flycheck-define-checker coala
   "A checker using coala.
 See URL `https://coala.io'."
-  :command ("coala" "--format" "{line}:{column}:{severity_str}:{message}" "--find-config" "--files" source)
+  :command ("coala" "--format" "{line}:{column}:{severity_str}:{message}" "--find-config" "--limit-files" source-original)
   :error-patterns  ((error (or "None" line) ":" (or "None" column) ":MAJOR:" (message))
                     (warning (or "None" line) ":" (or "None" column) ":NORMAL:" (message))
                     (info (or "None" line) ":" (or "None" column) ":INFO:" (message)))

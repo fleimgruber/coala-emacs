@@ -1,8 +1,7 @@
-[Default]
-enabled = True
-
 [commit]
 bears = GitCommitBear
 
 [python]
 bears = PEP8Bear
+files = **.py
+ignore = test/resources/language/*.py
